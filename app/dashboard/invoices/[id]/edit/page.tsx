@@ -7,6 +7,8 @@ export default async function Page({ params }: { params: { id: string } }) {
   const customers = await fetchCustomers();
   const invoice = await fetchInvoiceById(id);
 
+  console.log("Data Invoice", invoice);
+
   return (
     <main>
       <Breadcrumbs
